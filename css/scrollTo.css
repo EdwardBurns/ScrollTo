@@ -1,0 +1,110 @@
+/*-------------------------------
+    Mixins
+---------------------------------*/
+/*-------------------------------
+    Elements
+---------------------------------*/
+body {
+  background-color: #656565;
+  padding-bottom: 250px; }
+
+/*-------------------------------
+    Spacers
+---------------------------------*/
+.spacer {
+  height: 800px;
+  width: 100%; }
+  .spacer:nth-child(even) {
+    background-color: red; }
+  .spacer:nth-child(odd) {
+    background-color: blue; }
+
+/*-------------------------------
+    Scroll To Controls
+---------------------------------*/
+.control-title {
+  display: none;
+  position: relative;
+  float: right;
+  top: 38px;
+  right: 20px;
+  padding: 0;
+  white-space: nowrap;
+  color: #afacb2;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+  .control-title.displayTitle {
+    display: block; }
+
+#scrollTo-controls {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  width: auto;
+  z-index: 998;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.scrollTo-control {
+  height: 20px;
+  width: 20px;
+  border: 2px solid #afacb2;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background: transparent;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+  .scrollTo-control:hover {
+    background-color: #abd03a;
+    opacity: .7;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+  .scrollTo-control.filled {
+    background: #abd03a; }
+
+.center-control {
+  width: 50%;
+  position: fixed;
+  bottom: 20px;
+  left: 25%;
+  z-index: 999; }
+
+#control-next {
+  background: transparent url("../img/arrow.png") no-repeat center;
+  background-size: 12px;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #afacb2;
+  cursor: pointer;
+  margin: 0 auto;
+  display: table;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+  #control-next:hover {
+    background-color: #abd03a;
+    opacity: .6;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+  #control-next.inverted {
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg); }
+
+/*# sourceMappingURL=scrollTo.css.map */

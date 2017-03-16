@@ -1,0 +1,20 @@
+{
+  "name": "scrollTo",
+  "authors": [
+    "Edward Burns <eburns@intermedia4web.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

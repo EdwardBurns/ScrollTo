@@ -1,0 +1,118 @@
+$fill-color: #abd03a;
+$border-color: #afacb2;
+
+/*-------------------------------
+    Mixins
+---------------------------------*/
+@mixin transform($val) {
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  transform: $val;
+}
+@mixin transition( $val : ease 0.5s ) {
+  -webkit-transition: $val;
+  -moz-transition:$val;
+  -o-transition:$val;
+  transition:$val;
+}
+
+/*-------------------------------
+    Elements
+---------------------------------*/
+body {
+  background-color: #656565;
+  padding-bottom: 250px;
+}
+
+/*-------------------------------
+    Spacers
+---------------------------------*/
+.spacer {
+  height: 800px;
+  width: 100%;
+
+  &:nth-child(even){
+    background-color: red;
+  }
+  &:nth-child(odd){
+    background-color: blue;
+  }
+}
+
+/*-------------------------------
+    Scroll To Controls
+---------------------------------*/
+.control-title {
+  display: none;
+  position: relative;
+  float: right;
+  top: 38px;
+  right: 20px;
+  padding: 0;
+  white-space: nowrap;
+  color: #afacb2;
+  @include transform(rotate(-45deg));
+
+  &.displayTitle{
+    display: block;
+  }
+}
+#scrollTo-controls {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  width: auto;
+  z-index: 998;
+  @include transform(translateY(-50%));
+}
+.scrollTo-control {
+  height: 20px;
+  width: 20px;
+  border: 2px solid $border-color;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background: transparent;
+  @include transform(rotate(45deg));
+
+
+  &:hover {
+    background-color: $fill-color;
+    opacity: .7;
+    @include transition(all .5s ease);
+  }
+  &.filled {
+    background: $fill-color;
+  }
+}
+
+.center-control {
+  width: 50%;
+  position: fixed;
+  bottom: 20px;
+  left: 25%;
+  z-index: 999;
+}
+#control-next {
+  background: transparent url('../img/arrow.png') no-repeat center;
+  background-size: 12px;
+  height: 40px;
+  width: 40px;
+  border: 2px solid $border-color;
+  cursor: pointer;
+  margin: 0 auto;
+  display: table;
+  @include transform(rotate(45deg));
+  @include transition(all 1s ease);
+
+  &:hover {
+    background-color: $fill-color;
+    opacity: .6;
+    @include transition(all .5s ease);
+  }
+  &.inverted {
+    @include transform(rotate(225deg));
+  }
+}
+
+
